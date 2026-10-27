@@ -26,11 +26,18 @@ O discovery considera como escopo inicial a busca de cidades, a consulta das inf
 
 ## Riscos
 
-- A fonte de dados pode não cobrir todas as cidades ou pode retornar resultados ambíguos para nomes iguais.
-- Indisponibilidade, atraso ou limites de uso do serviço meteorológico podem impedir ou degradar as consultas.
-- O briefing não define se “cinco dias” inclui o dia atual nem o nível de detalhe esperado para cada dia.
-- Diferenças de fuso horário podem afetar a apresentação do clima atual e dos períodos da previsão.
-- Metas de desempenho, disponibilidade, validade dos dados e a matriz de compatibilidade ainda precisam ser validadas com o provedor e com as expectativas do produto.
+As probabilidades abaixo são estimativas qualitativas para o discovery; devem ser revistas quando o provedor, o público-alvo e os critérios de aceite forem definidos.
+
+| Categoria | Risco | Probabilidade | Impacto | Estratégia de mitigação |
+|---|---|---|---|---|
+| Técnico | Indisponibilidade, lentidão ou limites do provedor de dados impedirem consultas ou degradarem a experiência. | Média | Alto: usuários podem ficar sem clima atual ou previsão. | Confirmar cobertura, limites e frequência de atualização do provedor; definir timeouts e tratamento de falhas; informar a indisponibilidade e o horário da última atualização sem apresentar dados antigos como atuais. |
+| Técnico / Produto | Dados desatualizados ou períodos interpretados incorretamente por causa do fuso horário da cidade. | Média | Alto: informações podem parecer atuais ou corresponder ao dia errado. | Definir a validade dos dados e usar o fuso local da cidade; mostrar o horário da última atualização e o período da previsão; testar viradas de data e dados vencidos. |
+| Produto | “Próximos cinco dias” e o nível de detalhe da previsão não estão definidos. | Alta | Médio/alto: produto e usuários podem esperar períodos ou informações diferentes. | Decidir se hoje está incluído e se a previsão será diária, horária ou ambas; registrar a decisão nos critérios de aceite e validá-la com usuários. |
+| Técnico / Produto | Resultados de cidades homônimas ou cobertura geográfica insuficiente levarem à seleção do local errado. | Média | Alto: o usuário recebe informações meteorológicas de outra cidade. | Definir as regiões atendidas e exibir país e estado/região nos resultados; estabelecer regras para ordenação, ausência e excesso de resultados. |
+| Técnico | Busca e consultas podem não cumprir a meta de desempenho de 95% em até 2 segundos. | Média | Médio/alto: a experiência pode parecer lenta, especialmente em redes móveis. | Definir ambiente e método de medição; medir separadamente o tempo do app e o do provedor; otimizar o carregamento e evitar consultas desnecessárias enquanto o usuário digita. |
+| Técnico / Produto | A interface pode falhar em telas, orientações, navegadores ou tecnologias assistivas não contemplados nos testes. | Média | Alto: alguns usuários podem não conseguir concluir tarefas. | Definir a matriz de dispositivos e navegadores; testar as larguras e orientações previstas; validar teclado, foco, contraste e nomes acessíveis em relação à WCAG 2.2 nível AA. |
+| Produto | Público-alvo, objetivos de sucesso e escopo inicial não estão definidos; podem surgir expectativas de favoritos, localização automática ou alertas. | Alta | Alto: prioridades podem mudar durante o desenvolvimento e o produto pode não atender à necessidade principal. | Identificar usuários e tarefas prioritárias; definir indicadores de sucesso e itens fora do escopo; validar se a cidade e a unidade devem persistir entre sessões. |
+| Técnico / Produto | Metas de disponibilidade e usabilidade não têm método de avaliação acordado. | Média | Médio/alto: não será possível saber objetivamente se o app atende aos requisitos. | Especificar como calcular disponibilidade e usabilidade, incluindo cenários e exclusões; criar critérios mensuráveis e monitoramento antes do lançamento. |
 
 ## Perguntas em Aberto e Impactos
 
