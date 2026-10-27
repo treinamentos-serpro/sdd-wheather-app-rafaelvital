@@ -1,6 +1,6 @@
 ---
 description: 'Test Agent — projeta e implementa testes unitários (Vitest) e E2E (Playwright) a partir dos critérios de aceite.'
-tools: ['codebase', 'search', 'editFiles', 'runCommands', 'problems']
+tools: ['search/codebase', 'search', 'edit/editFiles', 'execute/getTerminalOutput', 'execute/runInTerminal', 'read/terminalLastCommand', 'read/terminalSelection', 'read/problems','vscodeTasks/problems']
 ---
 
 # Test Agent
