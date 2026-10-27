@@ -21,14 +21,14 @@ A fonte meteorológica definida é o Open-Meteo. A interface e a formatação re
 
 ## User Stories
 
-- **US-01:** Como pessoa que quer verificar o tempo em uma cidade, quero pesquisar seu nome e escolher o local correto para consultar dados relevantes para aquele lugar.
-- **US-02:** Como pessoa que consulta o tempo, quero ver as condições atuais e quando foram observadas para entender o que está acontecendo na cidade selecionada.
-- **US-03:** Como pessoa que planeja os próximos dias, quero consultar a previsão diária de hoje e dos quatro dias seguintes no horário local da cidade.
-- **US-04:** Como pessoa que prefere outra unidade, quero alternar entre Celsius e Fahrenheit para interpretar as temperaturas com facilidade.
-- **US-05:** Como pessoa que retorna à aplicação, quero reencontrar minha última cidade e unidade neste dispositivo para evitar repetir minhas escolhas.
-- **US-06:** Como pessoa que consulta dados meteorológicos, quero saber quando eles estão sendo atualizados ou quando uma consulta falha para não confundir informação antiga com atual.
-- **US-07:** Como pessoa que usa um dispositivo móvel, quero buscar uma cidade e ler o clima e a previsão sem perder informações ou controles.
-- **US-08:** Como pessoa que deseja conhecer a origem dos dados, quero encontrar a atribuição do provedor meteorológico.
+- **US-01:** Como usuário comum, quero pesquisar uma cidade e selecionar o local correto para consultar dados meteorológicos daquele lugar. *(FR-01, FR-02)*
+- **US-02:** Como usuário comum, quero ver o clima atual e o horário da observação para entender as condições recentes na cidade selecionada. *(FR-03)*
+- **US-03:** Como usuário comum, quero ver a previsão diária de hoje e dos quatro dias seguintes no calendário local da cidade para me planejar. *(FR-04)*
+- **US-04:** Como usuário comum, quero alternar entre Celsius e Fahrenheit para interpretar as temperaturas na unidade que prefiro. *(FR-05)*
+- **US-05:** Como usuário comum, quero que minha última cidade e unidade sejam lembradas neste dispositivo para retomar uma consulta sem repetir minhas escolhas. *(FR-06)*
+- **US-06:** Como usuário comum, quero atualizar os dados e receber avisos claros quando houver falha ou informação vencida para não confundir dados antigos com atuais. *(FR-07, FR-08)*
+- **US-07:** Como usuário comum, quero buscar uma cidade e consultar o clima atual e a previsão pelo celular para obter as mesmas informações fora do desktop. *(FR-09)*
+- **US-08:** Como usuário comum, quero encontrar a atribuição da fonte meteorológica para saber de onde vêm os dados. *(FR-10)*
 
 ## Acceptance Criteria
 
